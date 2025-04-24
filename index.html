@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delices Fruit Corp Spain</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffbe6;
+      color: #333;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f9d342; /* Fondo amarillo */
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header .logo {
+      margin-right: 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #d32f2f; /* Título en rojo */
+    }
+
+    .descripcion {
+      text-align: center;
+      margin: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .chifles-descripcion {
+      background-color: #fff;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 80%;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .productos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem;
+    }
+
+    .producto {
+      background-color: #fff;
+      border: 2px solid #f9d342;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .producto h3 {
+      margin-top: 1rem;
+      color: #4e3200;
+    }
+
+    .precio {
+      color: #f9d342;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1e5c0;
+      color: #4e3200;
+      font-size: 0.9rem;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #4e3200;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logotipo.png" alt="Logotipo de Delices Fruit Corp Spain" width="100">
+  </div>
+  <div>
+    <h1>Delices Fruit Corp Spain</h1>
+    <p>Importación y distribución de snacks tropicales desde Ecuador</p>
+  </div>
+</header>
+
+<div class="descripcion">
+  <p>Ofrecemos deliciosos <strong>platanitos chips</strong> directamente desde Ecuador, con una calidad incomparable. Perfectos para compartir, disfrutar o vender.</p>
+</div>
+
+<!-- Sección de descripción de los Chifles -->
+<div class="chifles-descripcion">
+  <h2>¿Qué son los Chifles?</h2>
+  <p>Los <strong>Chifles</strong> son deliciosos chips de plátano verde, originarios de Ecuador, elaborados de forma 100% natural. Son perfectos para quienes buscan un snack crujiente, saludable y lleno de sabor tropical.</p>
+  <p>El proceso de producción es artesanal, asegurando que cada bocado mantenga la frescura y el sabor característico del plátano verde. Estos chips son ideales para acompañar cualquier momento del día, ya sea en una reunión social, como un snack individual o como acompañante de tus comidas favoritas.</p>
+  <p>¡Disfruta del auténtico sabor ecuatoriano con nuestros Chifles!</p>
+</div>
+
+<!-- Catálogo de Productos -->
+<section class="productos">
+  <div class="producto">
+    <img src="chifles.jpg" alt="Platanitos Redondos">
+    <h3>Platanitos Chips Redondos</h3>
+    <p>Corte clásico, crujientes y con un toque justo de sal.</p>
+    <p class="precio">Precio: 0,90 € / cajita de 100g</p>
+    <a href="redondos.html" class="boton">Ver más</a>
+  </div>
+
+  <div class="producto">
+    <img src="largos.jpg" alt="Platanitos Largos">
+    <h3>Platanitos Chips Largos</h3>
+    <p>Ideales para un snack elegante y diferente. Crujientes y sabrosos.</p>
+    <p class="precio">Precio: 1 € / cajita de 100g</p>
+    <a href="largos.html" class="boton">Ver más</a>
+  </div>
+
+  <div class="producto">
+    <img src="maduritos.jpeg" alt="Platanitos Maduritos">
+    <h3>Platanitos Maduritos (Dulces)</h3>
+    <p>El toque dulce que todos aman. Suaves, dorados y adictivos.</p>
+    <p class="precio">Precio: 0,90 € / cajita de 100g</p>
+    <a href="maduritos.html" class="boton">Ver más</a>
+  </div>
+</section>
+
+<footer>
+  Distribuimos en Pamplona, Zaragoza, Valencia, Madrid, Murcia y más.<br>
+  Contáctanos: stalin.sampedro@delicesfruit.com | Tel: +34 624 410 200
+</footer>
+
+</body>
+</html>

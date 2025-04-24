@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platanitos Chips Redondos - Delices Fruit Corp Spain</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffbe6;
+      color: #333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #f9d342;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #4e3200;
+    }
+
+    .producto-detalle {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-left: 6px solid #f9d342;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .producto-detalle h2 {
+      color: #4e3200;
+    }
+
+    /* Estilos del carrusel */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 1rem auto;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease;
+      align-items: center; /* Asegura que las imágenes estén alineadas verticalmente */
+    }
+
+    .carousel-images img {
+      width: 100%;              /* Asegura que cada imagen ocupe el 100% del contenedor */
+      height: 400px;            /* Fija una altura específica para todas las imágenes */
+      object-fit: contain;      /* Asegura que las imágenes no se deformen y estén centradas */
+      border-radius: 8px;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .carousel-btn.left {
+      left: 0;
+    }
+
+    .carousel-btn.right {
+      right: 0;
+    }
+
+    .descripcion {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .precio {
+      color: #f9d342;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .boton-volver {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #4e3200;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #f1e5c0;
+      padding: 1rem;
+      color: #4e3200;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Delices Fruit Corp Spain</h1>
+  <p>Platanitos Chips Redondos - Detalles del Producto</p>
+</header>
+
+<section class="producto-detalle">
+  <h2>Platanitos Chips Redondos</h2>
+  
+  <!-- Carrusel de imágenes -->
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="redondos.jpg" alt="Platanitos Chips Redondos">
+      <img src="redondos2.jpg" alt="Platanitos Chips Redondos">
+      <img src="redondos3.jpg" alt="Platanitos Chips Redondos">
+    </div>
+    <button class="carousel-btn left" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-btn right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  
+  <p class="descripcion">
+    Los <strong>Platanitos Chips Redondos</strong> son deliciosos chips de plátano verde cortados en finas rodajas y fritos hasta conseguir un toque crujiente perfecto. Con un toque justo de sal, ofrecen una explosión de sabor tropical en cada bocado. Son el snack ideal para acompañar tus momentos de relax o compartir con amigos y familiares.
+  </p>
+
+  <p class="descripcion">
+    Este producto se elabora de manera artesanal, garantizando un proceso completamente natural, sin aditivos ni conservantes. El empaque transparente refleja la autenticidad y frescura del producto, dándole un aspecto natural y casero.
+  </p>
+
+  <p class="precio">Precio: 0,90 € / 100g</p>
+
+  <a href="index.html" class="boton-volver">Volver al catálogo</a>
+</section>
+
+<footer>
+  Distribuimos en Pamplona, Zaragoza, Valencia, Madrid, Murcia y más.<br>
+  Contacto: stalin.sampedro@delicesfruit.com | Tel: +34 624 410 200
+</footer>
+
+<script>
+  let currentSlide = 0;
+
+  const slides = document.querySelectorAll('.carousel-images img');
+  const totalSlides = slides.length;
+
+  function moveSlide(step) {
+    currentSlide += step;
+    if (currentSlide >= totalSlides) {
+      currentSlide = 0;
+    } else if (currentSlide < 0) {
+      currentSlide = totalSlides - 1;
+    }
+    updateCarousel();
+  }
+
+  function updateCarousel() {
+    const newTransformValue = -currentSlide * 100;
+    document.querySelector('.carousel-images').style.transform = `translateX(${newTransformValue}%)`;
+  }
+</script>
+
+</body>
+</html>
